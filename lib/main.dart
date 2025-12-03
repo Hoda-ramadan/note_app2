@@ -5,10 +5,12 @@ import 'package:notes_app2/const.dart';
 import 'package:notes_app2/cubit/note_cubit.dart';
 import 'package:notes_app2/model/note_model.dart';
 import 'package:notes_app2/views/home_page.dart';
+import 'package:notes_app2/views/simpel_bloc_obserivec.dart';
 
 void main() async {
   await Hive.initFlutter();
   await Hive.openBox(knotesbox);
+  Bloc.observer = SimpelBlocObserivec();
   Hive.registerAdapter(NoteModelAdapter());
   runApp(Nodes_app());
 }

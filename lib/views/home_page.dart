@@ -13,6 +13,7 @@ class HomePage extends StatelessWidget {
 
         onPressed: () {
           showModalBottomSheet(
+            isScrollControlled: true,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10),
             ),
